@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import '../node_modules/normalize.css/normalize.css';
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("../fonts/Roboto.ttf");
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+}
+
+#header-body {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#header #header-button {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+}
+
+#header #header-button:hover {
+    background-color: white;
+}
+
+#header #header-button:active {
+    background-color: grey;
+}
+
+#header-navbar {
+    position: absolute;
+    display: none;
+    top: -215px;
+    width: 100%;
+    transition: ease-in-out 300ms;
+}
+
+#header .navbar-button {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    height: 55px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: palevioletred;
 }
