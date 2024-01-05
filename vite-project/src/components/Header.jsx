@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarButton from './NavbarButton.js'
+import NavbarButton from './NavbarButton.jsx'
 
 export default function Header () {
     const [isOpen, toggle] = React.useState({transform: 'translateY(0px)', display: 'none', state: 'closed'});
