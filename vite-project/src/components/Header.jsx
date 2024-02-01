@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarButton from './NavbarButton.jsx'
+import { NavLink, Link } from 'react-router-dom'
 
 export default function Header () {
     const [isOpen, toggle] = React.useState({transform: 'translateY(0px)', display: 'none', state: 'closed'});
@@ -46,15 +46,14 @@ export default function Header () {
     return (
         <header id='header'>
             <div id='header-body'>
-                <p>OLEXANDR DIACHENKO</p>
+                <Link to='.'>OLEXANDR DIACHENKO</Link>
                 <div onClick={toggleNav} id='header-button'></div>
             </div>
             <div style={isOpen} id='header-navbar'>
-                <NavbarButton text='MAIN'></NavbarButton>
-                <NavbarButton text='WEDDINGS'></NavbarButton>
-                <NavbarButton text='COMMERCIAL'></NavbarButton>
-                <NavbarButton text='CREATIVE'></NavbarButton>
-                <NavbarButton text='CONTACTS'></NavbarButton>
+                <NavLink onClick={toggleNav} className='navbar-button' to='weddings'>Weddings</NavLink>
+                <NavLink onClick={toggleNav} className='navbar-button' to='commercial'>Commercial</NavLink>
+                <NavLink onClick={toggleNav} className='navbar-button' to='creative'>Creative</NavLink>
+                <NavLink onClick={toggleNav} className='navbar-button' to='contacts'>Contacts</NavLink>
             </div>
         </header>
     );

@@ -1,7 +1,5 @@
 export default function Footer () {
     return (
-        <div>
-            <h3>This is Footer</h3>
-        </div>
+        <footer id="footer">&#169; {new Date().getFullYear() } Olexandr Diachenko</footer>
     );
 }
